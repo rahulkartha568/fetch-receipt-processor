@@ -36,8 +36,9 @@ Example Request & Response:
     "items": [
         {"shortDescription": "Pepsi - 12-oz", "price": "1.25"},
         {"shortDescription": "Dasani", "price": "1.40"}
-    ]
+             ]
    }
+   
    Example Response:
    {
     "id": "f10819a6-5b59-4600-b16e-33902eb11662"
@@ -50,6 +51,8 @@ Response: A JSON object containing the number of points awarded.
 
 Example Request & Response:
    GET Request URL: http://localhost:3000/receipts/f10819a6-5b59-4600-b16e-33902e11662/points
+
+   
    Example Response:
    {
     "points": 15
