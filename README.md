@@ -50,8 +50,8 @@ Method: GET
 Response: A JSON object containing the number of points awarded.
 
 Example Request & Response:
-   GET Request URL: http://localhost:3000/receipts/f10819a6-5b59-4600-b16e-33902e11662/points
 
+   GET Request URL: http://localhost:3000/receipts/f10819a6-5b59-4600-b16e-33902e11662/points
    
    Example Response:
    {
