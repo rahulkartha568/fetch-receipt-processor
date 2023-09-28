@@ -15,6 +15,8 @@ This repository contains the source code for a simple webservice based off the a
     docker build -t fetch-receipt-processor .
 4. Run the docker container:
     docker run -p 3000:3000 fetch-receipt-processor
+5. Access the web service in your web browser or through API calls:
+Web service URL: http://localhost:3000
 
 ## API Endpoints
 Endpoint: Process Receipts 
@@ -23,7 +25,33 @@ Method: POST
 Payload: Receipt JSON
 Response: JSON containing an id for the receipt.
 
+Example Request & Response:
+   Request URL: http://localhost:3000/receipts/process
+   POST Body: 
+   {
+    "retailer": "Walgreens",
+    "purchaseDate": "2022-01-02",
+    "purchaseTime": "08:13",
+    "total": "2.65",
+    "items": [
+        {"shortDescription": "Pepsi - 12-oz", "price": "1.25"},
+        {"shortDescription": "Dasani", "price": "1.40"}
+    ]
+   }
+   Example Response:
+   {
+    "id": "f10819a6-5b59-4600-b16e-33902eb11662"
+   }
+   
 Endpoint: Get Points
 Path: /receipts/{id}/points
 Method: GET
 Response: A JSON object containing the number of points awarded.
+
+Example Request & Response:
+   GET Request URL: http://localhost:3000/receipts/f10819a6-5b59-4600-b16e-33902e11662/points
+   Example Response:
+   {
+    "points": 15
+   }
+   
